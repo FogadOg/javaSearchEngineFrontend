@@ -1,0 +1,29 @@
+.searchResults{
+    padding: 2rem 3rem;
+}
+
+.cite{
+    list-style: none;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+
+}
+.citeContainerTop{
+    display: flex;
+    align-items: center;
+}
+.PageName{
+    padding-left: .5rem;
+}
+
+.cite a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+}
+.cite a:hover .pageUrl{
+    color: blue;
+}
+.cite img{
+    width: 2rem;
+}

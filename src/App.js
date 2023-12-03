@@ -1,33 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import './styles/style.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import SearchPage from './components/search/searchPage';
+import ImagePage from './components/search/imagePage';
 
 function App() {
-  const [websites, setWebsites] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/")
-      .then((res) => res.json())
-      .then((data) => {
-        setWebsites(data);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }, []);
-
-  console.log(websites);
 
   return (
-    <div className="App">
-      <h1>Websites</h1>
-      <ul>
-        {websites.map((website, index) => (
-          <li>
-            
-            <a href={website.url}>{website.pageTitle}</a>
-          </li>
-        ))}
-      </ul>
+    <div>
+      <Router>
+        <Routes>
+
+          <Route
+            exact
+            path="/"
+            element={<SearchPage/>}
+          />
+
+          <Route
+            exact
+            path="/images"
+            element={<ImagePage/>}
+          />
+
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
