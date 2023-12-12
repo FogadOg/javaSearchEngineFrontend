@@ -4,7 +4,7 @@ function ImagePage() {
   const [websites, setWebsites] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/")
+    fetch("http://localhost:8080/search/rome")
       .then((res) => res.json())
       .then((data) => {
         setWebsites(data);

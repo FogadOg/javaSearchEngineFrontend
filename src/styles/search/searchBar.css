@@ -2,3 +2,51 @@
     width: 100vw;
     padding: 1rem 2rem;
 }
+header{
+    padding: 1rem 3rem;
+    display: grid;
+    gap: 1rem;
+    border-bottom: 1px solid #333;
+}
+.topHeader{
+    display: flex;
+    align-items: center;
+
+}
+.left{
+    flex: .5;
+}
+.right{
+    flex: .5;
+}
+.searchBar{
+    background-color: #d7d7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+}
+.searchBar input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.searchBar button{
+    background-color: transparent;
+    border: none;
+}
+.buttonContainer{
+    display: flex;
+    gap: .4rem;
+}
+.buttonContainer a{
+    border: 1px solid #d7d7d7;
+    padding: .4rem .7rem;
+    border-radius: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+
