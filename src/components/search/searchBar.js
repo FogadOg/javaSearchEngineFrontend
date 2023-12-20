@@ -21,6 +21,7 @@ function SearchBar() {
 
   const clearSearchBar=()=>{
     setSearchQuery("")
+    window.history.replaceState(null, '', `/search`);
   }
 
   const searchQueryFiltered=searchQuery.replace("%20", " ")
