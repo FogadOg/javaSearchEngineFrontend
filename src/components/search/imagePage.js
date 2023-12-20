@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import SearchBar from './searchBar';
 
 function ImagePage() {
   const [websites, setWebsites] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/search/rome")
+    fetch("http://localhost:8080/images/rome")
       .then((res) => res.json())
       .then((data) => {
         setWebsites(data);
@@ -16,16 +17,20 @@ function ImagePage() {
 
   console.log(websites);
   return (
-    <div className="images">
-      {websites.map((website, index) => (
-      <div key={index} className='image'>
-        {website.images.map((image, imageIndex) => (
-          <img key={imageIndex} src={image.src} alt={image.alt} />
-        ))}
-      </div>
+    <>
+      <SearchBar/>
+        <div className="images">
+          {websites.map((website, index) => (
+          <div key={index} className='image'>
+            {website.images.map((image, imageIndex) => (
+              <img key={imageIndex} src={image.src} alt={image.alt} />
+            ))}
+          </div>
 
-      ))}
-    </div>
+          ))}
+        </div>
+    </>
+
   );
 }
 

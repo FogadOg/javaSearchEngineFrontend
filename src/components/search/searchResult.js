@@ -1,45 +1,29 @@
-import React, { useState, useEffect } from 'react';
 import '../../styles/search/searchResult.css';
 
-
-function SearchResult() {
-  const [websites, setWebsites] = useState([]);
+function SearchResult({websites}) {
 
 
-  useEffect(() => {
-    fetch("http://localhost:8080/search/rome")
-      .then((res) => res.json())
-      .then((data) => {
-        setWebsites(data);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }, []);
 
-  console.log(websites);
 
   return (
-
     <div className="searchResults">
+      {websites.length > 0 && websites[websites.length - 1]?.[0]?.searchTime && (
+        <p>{websites[websites.length - 1][0].searchTime}</p>
+      )}
       <ul>
-          {websites.map((website, index) => (
-          <li className='cite'>
-              <a href={website.url}>
+        {websites.slice(0, -2).map((website, index) => (
+          <li className='cite' key={index}>
+            <a href={website.url}>
               <div className='citeContainerTop'>
-                  <img src={website.favicon} alt='website favicon'/>
-                  <p className='PageName'>{website.pageName}</p>
-
+                {website.favicon && <img src={website.favicon} alt='website favicon'/>}
+                {website.pageName && <p className='PageName'>{website.pageName}</p>}
               </div>
               <div className='citeContainerBottom'>
-                  <p className='pageUrl' href={website.url}>{website.pageTitle}</p>
-
+                <p className='pageUrl'>{website.pageTitle}</p>
               </div>
-              </a>
-
-              
+            </a>
           </li>
-          ))}
+        ))}
       </ul>
     </div>
   );

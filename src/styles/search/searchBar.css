@@ -3,10 +3,13 @@
     padding: 1rem 2rem;
 }
 header{
-    padding: 1rem 3rem;
+    padding: .5rem 1rem;
     display: grid;
     gap: 1rem;
-    border-bottom: 1px solid #333;
+    background-color: white;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
 }
 .topHeader{
     display: flex;
@@ -25,13 +28,21 @@ header{
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    padding: .3rem 1rem;
+    font-size: 1.8rem;
+    padding: .5rem 1.2rem;
     border-radius: 1rem;
 }
 .searchBar input{
     background-color: transparent;
+    font-weight: 600;
+
     border: none;
     outline: none;
+}
+button .searchButton{
+    transition: 100ms;
+}button .searchButton:hover{
+    transform: scale(1.2);
 }
 .searchBar button{
     background-color: transparent;
@@ -42,11 +53,16 @@ header{
     gap: .4rem;
 }
 .buttonContainer a{
+    transition: 100ms;
     border: 1px solid #d7d7d7;
+    font-weight: 500;
     padding: .4rem .7rem;
     border-radius: 1rem;
     color: #333;
     text-decoration: none;
+}
+.buttonContainer a:hover{
+    transform: scale(1.2);
 }
 
 

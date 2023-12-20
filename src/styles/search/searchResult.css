@@ -8,6 +8,11 @@
     margin-bottom: 3rem;
 
 }
+.cite small{
+    font-size: .5rem;
+    max-width: 100%;
+    overflow-y: scroll;
+}
 .citeContainerTop{
     display: flex;
     align-items: center;

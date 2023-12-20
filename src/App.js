@@ -1,9 +1,10 @@
+import React, { useEffect } from 'react';
 import './styles/style.css'
+
 import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate,
 } from "react-router-dom";
 import SearchPage from './components/search/searchPage';
 import ImagePage from './components/search/imagePage';
@@ -17,7 +18,7 @@ function App() {
 
           <Route
             exact
-            path="/"
+            path="/search/:query"
             element={<SearchPage/>}
           />
 

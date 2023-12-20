@@ -1,42 +1,68 @@
+import React, { useState,useEffect  } from 'react';
 import '../../styles/search/searchBar.css';
 import SearchIcon from '@mui/icons-material/Search';
-import {
-  Link
-} from "react-router-dom";
-
+import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
 
 function SearchBar() {
 
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const currentPath = window.location.pathname.split('/search/')[1];
+    setSearchQuery(currentPath || '');
+  }, []);
+
+  const handleInputChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    window.history.replaceState(null, '', `/search/${query}`);
+  };
+
+  const clearSearchBar=()=>{
+    setSearchQuery("")
+  }
+
+  const searchQueryFiltered=searchQuery.replace("%20", " ")
+
   return (
     <header>
-      <div className='topHeader'>
+      <div className="topHeader">
         <div className="left">
-          <h1>search</h1>
-        </div>
-        <div className="right">
-          <div className='searchBarTopContainer'>
-              <form className='searchBar'>
-                <input input="text" id='searchBar'/>
-                <button>
-                  <SearchIcon/>
+          <div className="searchBarTopContainer">
+            <form className="searchBar">
+              <input
+                id="searchBar"
+                placeholder="Search..."
+                type="text"
+                value={searchQueryFiltered}
+                onChange={handleInputChange}
+              />
+              {searchQuery ? (
+                <button onClick={clearSearchBar}>
+                  <CloseIcon fontSize='small' />
+
                 </button>
-              </form>
+
+              ) : (
+                <></>
+              )}
+              <button type="submit">
+                <SearchIcon className="searchButton" fontSize="medium" />
+              </button>
+            </form>
           </div>
         </div>
+        <div className="right"></div>
       </div>
-      <div className='bottomHeader'>
-        <div className='buttonContainer'>
+      <div className="bottomHeader">
+        <div className="buttonContainer">
           <Link to="/">All</Link>
           <Link to="/images">Images</Link>
           <Link>Map</Link>
         </div>
-
       </div>
-
-
-
     </header>
-
   );
 }
 
