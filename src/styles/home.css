@@ -1,0 +1,33 @@
+.home{
+    padding: 0 1rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logoContainer img{
+    width: 60%;
+}
+
+.homeCenterContainer{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+.homeCenterContainer h1{
+    color: var(--mainFontColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,8 +6,9 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import SearchPage from './components/search/searchPage';
-import ImagePage from './components/search/imagePage';
+import SearchPage from './components/search/searchPages/searchPage';
+import ImagePage from './components/search/searchPages/imagePage';
+import Home from './components/Home';
 
 function App() {
 
@@ -15,6 +16,12 @@ function App() {
     <div>
       <Router>
         <Routes>
+
+          <Route
+            exact
+            path="/"
+            element={<Home/>}
+          />
 
           <Route
             exact

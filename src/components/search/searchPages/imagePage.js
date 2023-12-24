@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from './searchBar';
+import SearchHeader from '../searchHeader';
 
 function ImagePage() {
   const [websites, setWebsites] = useState([]);
@@ -18,7 +18,7 @@ function ImagePage() {
   console.log(websites);
   return (
     <>
-      <SearchBar/>
+      <SearchHeader/>
         <div className="images">
           {websites.map((website, index) => (
           <div key={index} className='image'>

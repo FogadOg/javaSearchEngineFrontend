@@ -27,43 +27,29 @@ function SearchBar() {
   const searchQueryFiltered=searchQuery.replace("%20", " ")
 
   return (
-    <header>
-      <div className="topHeader">
-        <div className="left">
-          <div className="searchBarTopContainer">
-            <form className="searchBar">
-              <input
-                id="searchBar"
-                placeholder="Search..."
-                type="text"
-                value={searchQueryFiltered}
-                onChange={handleInputChange}
-              />
-              {searchQuery ? (
-                <button onClick={clearSearchBar}>
-                  <CloseIcon fontSize='small' />
+    <>
+      <form className="searchBar">
+        <input
+          id="searchBar"
+          placeholder="Search..."
+          type="text"
+          value={searchQueryFiltered}
+          onChange={handleInputChange}
+        />
+        {searchQuery ? (
+          <button onClick={clearSearchBar}>
+            <CloseIcon fontSize='small' />
 
-                </button>
+          </button>
 
-              ) : (
-                <></>
-              )}
-              <button type="submit">
-                <SearchIcon className="searchButton" fontSize="medium" />
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="right"></div>
-      </div>
-      <div className="bottomHeader">
-        <div className="buttonContainer">
-          <Link to="/">All</Link>
-          <Link to="/images">Images</Link>
-          <Link>Map</Link>
-        </div>
-      </div>
-    </header>
+        ) : (
+          <></>
+        )}
+        <button type="submit">
+          <SearchIcon className="searchButton" fontSize="medium" />
+        </button>
+      </form>
+    </>
   );
 }
 

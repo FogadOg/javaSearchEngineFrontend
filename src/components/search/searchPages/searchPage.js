@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from './searchBar';
-import SearchResult from './searchResult';
+import SearchBar from '../searchBar';
+import SearchResult from '../searchResult';
 import { useParams } from 'react-router-dom';
 
 function SearchPage() {
