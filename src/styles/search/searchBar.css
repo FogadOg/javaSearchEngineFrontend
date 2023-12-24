@@ -27,18 +27,40 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
     font-size: 1.8rem;
-    padding: .5rem 1.2rem;
+    padding: .5rem 0;
     border-radius: 1rem;
+}
+.searchBarLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: .2;
 }
 .searchBar input{
     background-color: transparent;
     font-weight: 600;
-
+    font-size: 1rem;
     border: none;
     outline: none;
 }
+.searchBarCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: .3;
+
+}
+.searchBarRight{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex: .3;
+
+}
+
+
+
 button .searchButton{
     transition: 100ms;
 }button .searchButton:hover{
@@ -47,6 +69,7 @@ button .searchButton{
 .searchBar button{
     background-color: transparent;
     border: none;
+    /* flex: .3; */
 }
 .buttonContainer{
     display: flex;

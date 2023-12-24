@@ -6,3 +6,6 @@
 :root{
     --mainFontColor:#333;
 }
+input:focus {
+    outline: none;
+}

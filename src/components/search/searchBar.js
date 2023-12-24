@@ -29,25 +29,34 @@ function SearchBar() {
   return (
     <>
       <form className="searchBar">
-        <input
-          id="searchBar"
-          placeholder="Search..."
-          type="text"
-          value={searchQueryFiltered}
-          onChange={handleInputChange}
-        />
-        {searchQuery ? (
-          <button onClick={clearSearchBar}>
-            <CloseIcon fontSize='small' />
+        <div className='searchBarLeft'>
+          <input
+            id="searchBar"
+            placeholder="Search..."
+            type="text"
+            value={searchQueryFiltered}
+            onChange={handleInputChange}
+          />
 
+        </div>
+        <div className='searchBarCenter'>
+          {searchQuery ? (
+            <button onClick={clearSearchBar}>
+              <CloseIcon fontSize='small' />
+
+            </button>
+
+          ) : (
+            <></>
+          )}
+
+        </div>
+        <div className='searchBarRight'>
+          <button type="submit">
+            <SearchIcon className="searchButton" fontSize="medium" />
           </button>
 
-        ) : (
-          <></>
-        )}
-        <button type="submit">
-          <SearchIcon className="searchButton" fontSize="medium" />
-        </button>
+        </div>
       </form>
     </>
   );
