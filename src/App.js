@@ -9,6 +9,7 @@ import {
 import SearchPage from './components/search/searchPages/searchPage';
 import ImagePage from './components/search/searchPages/imagePage';
 import Home from './components/Home';
+import IndexMap from './components/indexMap';
 
 function App() {
 
@@ -33,6 +34,12 @@ function App() {
             exact
             path="/images"
             element={<ImagePage/>}
+          />
+
+          <Route
+            exact
+            path='/index/view'
+            element={<IndexMap/>}
           />
 
         </Routes>

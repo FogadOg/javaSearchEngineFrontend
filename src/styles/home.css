@@ -19,7 +19,36 @@
 .homeCenterContainer h1{
     color: var(--mainFontColor);
 }
+@media (min-width:1025px){
+    .logoContainer img{
+        width: 40%;
+    }
+    
+    .searchBarLeft{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex: .8;
+    }
+    .searchBarCenter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: .05;
 
+    }
+    .searchBarRight{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex: .05;
+
+    }
+    .searchBar input{
+        flex: 1;
+    }
+
+}
 
 
 
