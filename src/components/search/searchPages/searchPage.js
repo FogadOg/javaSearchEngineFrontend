@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from '../searchBar';
 import SearchResult from '../searchResult';
 import { useParams } from 'react-router-dom';
+import SearchHeader from '../searchHeader';
 
 function SearchPage() {
   const [websites, setWebsites] = useState([]);
@@ -23,7 +24,7 @@ function SearchPage() {
 
   return (
     <>
-      <SearchBar />
+      <SearchHeader />
       <SearchResult websites={websites} />
     </>
   );
