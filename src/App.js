@@ -5,6 +5,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
+    Navigate
 } from "react-router-dom";
 import SearchPage from './components/search/searchPages/searchPage';
 import ImagePage from './components/search/searchPages/imagePage';
@@ -28,6 +29,11 @@ function App() {
             exact
             path="/search/:query"
             element={<SearchPage/>}
+          />
+          <Route
+            exact
+            path="/search"
+            element={<Navigate to="/"/>}
           />
 
           <Route
