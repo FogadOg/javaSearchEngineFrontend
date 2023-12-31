@@ -12,6 +12,7 @@ header{
     left: 0; */
 
 }
+
 .topHeader{
     display: flex;
     align-items: center;
@@ -29,6 +30,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.2rem;
     font-size: 1.8rem;
     padding: .5rem 0;
     border-radius: 1rem;
@@ -77,7 +79,8 @@ button .searchButton{
 .searchBar button{
     background-color: transparent;
     border: none;
-    /* flex: .3; */
+    color: var(--fontColor);
+    flex: .3;
 }
 .buttonContainer{
     display: flex;
@@ -87,9 +90,10 @@ button .searchButton{
     transition: 100ms;
     border: 1px solid #d7d7d7;
     font-weight: 500;
+    font-weight: 700;
     padding: .4rem .7rem;
     border-radius: 1rem;
-    color: #333;
+    color: var(--fontColor);
     text-decoration: none;
 }
 .buttonContainer a:hover{

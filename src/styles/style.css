@@ -5,6 +5,7 @@
 
 :root{
     --mainFontColor:#333;
+    --fontColor:#4b4a4a;
 }
 input:focus {
     outline: none;

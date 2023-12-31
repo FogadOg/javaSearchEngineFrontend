@@ -5,7 +5,7 @@
 .cite{
     list-style: none;
     padding-bottom: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
 }
 .cite small{
@@ -19,6 +19,8 @@
 }
 .PageName{
     padding-left: .5rem;
+    font-size: .7rem;
+    font-weight: 500;
 }
 
 .cite a{
@@ -31,4 +33,7 @@
 }
 .cite img{
     width: 2rem;
+}
+.cite .pageTittle{
+    font-size: .8rem;
 }

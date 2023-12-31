@@ -24,7 +24,7 @@ function SearchPage() {
 
   return (
     <>
-      <SearchHeader />
+      <SearchHeader query={query}/>
       <SearchResult websites={websites} />
     </>
   );
