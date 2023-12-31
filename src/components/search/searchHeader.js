@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SearchBar from './searchBar';
 import searchEngineLogo from "../../static/images/searchEngineLogo.png"
 
-function SearchHeader() {
+function SearchHeader({query}) {
 
 
 
@@ -22,8 +22,8 @@ function SearchHeader() {
       </div>
       <div className="bottomHeader">
         <div className="buttonContainer">
-          <Link to="/">All</Link>
-          <Link to="/images">Images</Link>
+          <Link to={`/search/${query}`}>All</Link>
+          <Link to={`/images/${query}`}>Images</Link>
           <Link>Map</Link>
         </div>
       </div>
