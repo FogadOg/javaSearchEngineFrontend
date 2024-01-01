@@ -19,6 +19,7 @@ function SearchResult({websites}) {
               </div>
               <div className='citeContainerBottom'>
                 <p className='pageTittle'>{website.pageTitle}</p>
+                <p className='pageContentInsight'>{website.content}</p>
               </div>
             </a>
           </li>
