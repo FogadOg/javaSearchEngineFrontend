@@ -1,5 +1,5 @@
 .searchResults{
-    padding: 2rem 3rem;
+    padding: 2rem 1.4rem;
 }
 
 .cite{
@@ -36,4 +36,10 @@
 }
 .cite .pageTittle{
     font-size: .8rem;
+}
+.cite .pageContentInsight{
+    margin-top: .3rem;
+    font-size: .6rem;
+    font-weight: 300;
+    color: var(--fontColor);
 }
