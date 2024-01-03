@@ -40,6 +40,11 @@ function SearchBar() {
 
         </div>
         <div className='searchBarCenter'>
+          <button type="submit">
+            <SearchIcon className="searchButton" fontSize="medium" />
+          </button>
+        </div>
+        <div className='searchBarRight'>
           {searchQuery ? (
             <button onClick={clearSearchBar}>
               <CloseIcon fontSize='small' />
@@ -49,12 +54,6 @@ function SearchBar() {
           ) : (
             <></>
           )}
-
-        </div>
-        <div className='searchBarRight'>
-          <button type="submit">
-            <SearchIcon className="searchButton" fontSize="medium" />
-          </button>
 
         </div>
       </form>
