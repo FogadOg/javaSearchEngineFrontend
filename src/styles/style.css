@@ -4,8 +4,10 @@
 }
 
 :root{
-    --mainFontColor:#333;
-    --fontColor:#4b4a4a;
+    --primaryFontColor:#333;
+    --secondaryFontColor:#4b4a4a;
+    --primary: #f0f0f0;
+    --secondary: #2b55ca;
 }
 input:focus {
     outline: none;

@@ -41,5 +41,31 @@
     margin-top: .3rem;
     font-size: .6rem;
     font-weight: 300;
-    color: var(--fontColor);
+    color: var(--secondaryFontColor);
+}
+
+@media (min-width:1025px){
+    .searchResults{
+        padding: 2rem 11rem;
+    }
+    .searchResults ul{
+        width: 28rem;
+    }
+    .cite .pageTittle{
+        font-size: 1.1rem;
+    }
+    .cite .pageContentInsight{
+        margin-top: .3rem;
+        font-size: .8rem;
+        font-weight: 300;
+        color: var(--secondaryFontColor);
+    }
+    .PageName{
+        padding-left: .5rem;
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    .cite img {
+        width: 3rem;
+    }
 }

@@ -5,47 +5,45 @@
 header{
     padding: .5rem 1rem;
     display: grid;
-    gap: .1rem;
+    gap: .3rem;
     background-color: white;
     /* position: sticky;
     top: 0;
     left: 0; */
+    border-bottom: 1px solid var(--primary);
 
 }
 
 .topHeader{
     display: flex;
     align-items: center;
-
+    gap: 1rem;
 }
 .left{
-    flex: .5;
+    flex: 0;
 }
 .right{
-    flex: .5;
+    flex: .3;
 
 }
 .searchBar{
-    background-color: #d7d7d7;
+    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.2rem;
+    padding: .5rem .7rem;
     font-size: 1.8rem;
-    padding: .5rem 0;
     border-radius: 1rem;
+
 }
 .topHeader .left img{
     width: 3rem;
-}
-.topHeader .searchBar{
-    padding: .5rem .5rem;
 }
 .searchBarLeft{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: .2;
+    flex: .4;
 }
 .searchBar input{
     background-color: transparent;
@@ -75,11 +73,13 @@ button .searchButton{
     transition: 100ms;
 }button .searchButton:hover{
     transform: scale(1.2);
+    color: var(--secondary);
+
 }
 .searchBar button{
     background-color: transparent;
     border: none;
-    color: var(--fontColor);
+    color: currentColor;
     flex: .3;
 }
 .buttonContainer{
@@ -88,12 +88,12 @@ button .searchButton{
 }
 .buttonContainer a{
     transition: 100ms;
-    border: 1px solid #d7d7d7;
+    border: 1px solid var(--primary);
     font-weight: 500;
     font-weight: 700;
-    padding: .4rem .7rem;
+    padding: .5rem .8rem;
     border-radius: 1rem;
-    color: var(--fontColor);
+    color: var(--secondaryFontColor);
     text-decoration: none;
 }
 .buttonContainer a:hover{

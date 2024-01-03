@@ -49,13 +49,14 @@ function SearchBar() {
           ) : (
             <></>
           )}
+        </div>
+
         <div className='searchBarRight'>
           <button type="submit">
             <SearchIcon className="searchButton" fontSize="medium" />
           </button>
         </div>
-
-        </div>
+        
       </form>
     </>
   );

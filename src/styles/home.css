@@ -17,7 +17,7 @@
     gap: 2rem;
 }
 .homeCenterContainer h1{
-    color: var(--mainFontColor);
+    color: var(--primaryFontColor);
 }
 @media (min-width:1025px){
     .logoContainer img{
@@ -34,14 +34,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: .05;
+        flex: .1;
 
     }
     .searchBarRight{
         display: flex;
         align-items: center;
         justify-content: right;
-        flex: .05;
+        flex: .1;
 
     }
     .searchBar input{
