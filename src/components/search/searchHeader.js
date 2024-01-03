@@ -2,7 +2,7 @@ import React, { useState,useEffect  } from 'react';
 import '../../styles/search/searchBar.css';
 import { Link } from 'react-router-dom';
 import SearchBar from './searchBar';
-import searchEngineLogo from "../../static/images/searchEngineLogo.png"
+import searchEngineLogoPrimary from "../../static/images/searchEngineLogoPrimary.png"
 
 function SearchHeader({query}) {
 
@@ -12,7 +12,7 @@ function SearchHeader({query}) {
     <header>
       <div className="topHeader">
         <div className="left">
-          <img src={searchEngineLogo}/>
+          <img src={searchEngineLogoPrimary}/>
         </div>
         <div className="right">
           <div className="searchBarTopContainer">
