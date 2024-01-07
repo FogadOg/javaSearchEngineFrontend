@@ -11,6 +11,7 @@ import SearchPage from './components/search/searchPages/searchPage';
 import ImagePage from './components/search/searchPages/imagePage';
 import Home from './components/Home';
 import IndexMap from './components/indexMap';
+import SearchResult from './components/search/searchResult';
 
 function App() {
 
@@ -24,22 +25,21 @@ function App() {
             path="/"
             element={<Home/>}
           />
-
           <Route
             exact
-            path="/search/:query"
+            path="/Search/:query"
             element={<SearchPage/>}
           />
           <Route
             exact
-            path="/search"
-            element={<Navigate to="/"/>}
+            path="/images/:query"
+            element={<ImagePage/>}
           />
 
           <Route
             exact
-            path="/images"
-            element={<ImagePage/>}
+            path="*"
+            element={<Navigate to="/"/>}
           />
 
           <Route

@@ -1,31 +1,42 @@
+import React, { useState, useEffect } from 'react';
 import '../../styles/search/searchResult.css';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import ImagePage from './searchPages/imagePage';
+import SearchPage from './searchPages/searchPage';
+import Home from '../Home';
+function SearchResult() {
 
-function SearchResult({websites}) {
+  const [websites, setWebsites] = useState([]);
+  const {query} =useParams()
+  
+  console.log("SearchResult query: ",query);
 
+  
+  useEffect(() => {
+    fetch(`http://localhost:8080/search/${query}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setWebsites(data);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
 
+  console.log(websites);
 
   return (
-    <div className="searchResults">
-      {websites.length > 0 && websites[websites.length - 1]?.[0]?.searchTime && (
-        <p>{websites[websites.length - 1][0].searchTime}</p>
-      )}
-      <ul>
-        {websites.map((website, index) => (
-          <li className='cite' key={index}>
-            <a href={website.url}>
-              <div className='citeContainerTop'>
-                {website.favicon && <img src={website.favicon} alt='website favicon'/>}
-                {website.pageName && <p className='PageName'>{website.pageName}</p>}
-              </div>
-              <div className='citeContainerBottom'>
-                <p className='pageTittle'>{website.pageTitle}</p>
-                <p className='pageContentInsight'>{website.content}</p>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+
+  
+      
+    </>
   );
 }
 
