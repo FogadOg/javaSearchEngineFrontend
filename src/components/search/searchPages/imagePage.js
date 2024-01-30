@@ -24,11 +24,11 @@ function ImagePage() {
       <SearchHeader query={query}/>
         <div className="images">
           {websites.map((website, index) => (
-          <div key={index} className='image'>
+          <>
             {website.images.map((image, imageIndex) => (
-              <img key={imageIndex} src={image.src} alt={image.alt} />
+              <img className='resultImage' key={imageIndex} src={image.src} alt={image.alt} />
             ))}
-          </div>
+          </>
 
           ))}
         </div>

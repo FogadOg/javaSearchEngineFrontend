@@ -43,7 +43,17 @@
     font-weight: 300;
     color: var(--secondaryFontColor);
 }
+.images{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
+}
+.resultImage{
+    max-width: 300rem;
+    max-height: 20rem;
+    margin: 1rem;
+}
 @media (min-width:1025px){
     .searchResults{
         padding: 2rem 11rem;
